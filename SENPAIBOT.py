@@ -3,10 +3,10 @@ import websocket
 import ssl
 import requests
 from json import loads,dumps
-nick = 'SenpaiBot'   #change this!!!
+nick = 'SenpaiBot'   #change this to your bot name!!!
 ws = websocket.create_connection("wss://hack.chat/chat-ws",sslopt={"cert_reqs": ssl.CERT_NONE}) #1: connect
-ws.send(dumps({'cmd':'join','channel':'bot','nick':nick,'pass':'<your password>'}))#2: join
-print('The bot is now running...')
+ws.send(dumps({'cmd':'join','channel':'bot','nick':nick,'pass':'<your password>'}))#2: join #change bot to the channel you want it to join  and change its pass to a good password
+print('The bot is now running...') # if you want you can change this to something funni like print('Bomb has been planted')
 class global_vars:
     def __init__(self):
         pass
@@ -23,7 +23,7 @@ while True:
         if result['nick'] == nick:continue
         msg = result['text']
         if msg == 'hello':
-            ws.send(dumps({'cmd':'chat','text':'Hello! I am a bot! Now go get a life instead of talking to randos on Hack.chat'}))
+            ws.send(dumps({'cmd':'chat','text':'Hello! I am a bot! Now go get a life instead of talking to randos on Hack.chat'})) #change this to your custom hello message
         if msg[0] == '%':
             cmdlist = msg.split(' ')
             cmdname = cmdlist[0][1:]
@@ -36,8 +36,8 @@ while True:
                         ws.send(dumps({'cmd':'chat','text':'I have never seen this man...'}))
                 else:
                     ws.send(dumps({'cmd':'chat','text':'? ? ?'}))
-            elif cmdname == 'joke':
-                json_data = get_json('https://v2.jokeapi.dev/joke/Any?blacklistFlags=political,racist,sexist')
+            elif cmdname == 'joke': 
+                json_data = get_json('https://v2.jokeapi.dev/joke/Any?blacklistFlags=political,sexist') # put your own joke filters here
                 if json_data['error']:
                     sendmsg = 'Oops! There is a problem with the API we are sending us stuff!!!'
                 else:
