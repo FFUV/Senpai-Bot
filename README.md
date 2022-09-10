@@ -40,4 +40,3 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-[![CodeFactor](https://www.codefactor.io/repository/github/ttrmaniac/hack.chat-bot/badge)](https://www.codefactor.io/repository/github/ttrmaniac/hack.chat-bot)
