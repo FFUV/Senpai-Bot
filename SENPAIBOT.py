@@ -67,7 +67,7 @@ while True:
             else:
                 trip = i['trip']
             vars.userinfo.update({result['nick']:{'hash':result['hash'],'trip':trip}})
-        ws.send(dumps({'cmd':'whisper','nick':result['nick'],'text':'Hey guy, I am a bot, you can send \"%help\" to get my help information UwU I also like femboy bussy.'}))
+        ws.send(dumps({'cmd':'whisper','nick':result['nick'],'text':'Hey guy, I am a bot, you can send \"%help\" to get my help information'}))
     elif cmd == 'onlineRemove':
         if result['nick'] in vars.users:vars.users.remove(result['nick'])
         if result['nick'] in vars.userinfo:
