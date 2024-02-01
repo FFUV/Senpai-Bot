@@ -1,4 +1,4 @@
-# Hack.chat bot
+# Now Defunct
 A hack.chat bot is a bot made for hack.chat that goes to different servers the commands on this bot will be shown when you do %help (special thanks to MrZhang365 for teaching me how to make bots)
 This project just uses a few simple websocket-client protocols using a html library using requests !  ( btw if your wondering yes we did use jokeapi stay mad >:) )    [![CodeFactor](https://www.codefactor.io/repository/github/ttrmaniac/senpai-bot/badge)](https://www.codefactor.io/repository/github/ttrmaniac/senpai-bot)
 oh and yes this can be used as a template as long as you give me credits
